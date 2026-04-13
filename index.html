@@ -13,16 +13,21 @@ body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-s
 .hero .meta{font-size:.9rem;opacity:.7}
 .hero .meta span{margin:0 .5rem}
 .wrap{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
-h1{font-size:1.6rem;font-weight:800;margin:3rem 0 1rem;padding:1rem 1.2rem;border-radius:10px;color:#fff}
+h1{font-size:1.5rem;font-weight:800;margin:3rem 0 1rem;padding:1rem 1.2rem;border-radius:10px;color:#fff}
 h1:nth-of-type(1){background:#dc2626}
-h1:nth-of-type(2){background:#2563eb}
-h1:nth-of-type(3){background:#059669}
-h1:nth-of-type(4){background:#d97706}
-h1:nth-of-type(5){background:#7c3aed}
-h1:nth-of-type(6){background:#0891b2}
-h1:nth-of-type(7){background:#be185d}
-h1:nth-of-type(8),h1:nth-of-type(9){background:#334155}
-h2{font-size:1.25rem;margin:2rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid #e5e7eb;color:#374151}
+h1:nth-of-type(2){background:#dc2626}
+h1:nth-of-type(3){background:#2563eb}
+h1:nth-of-type(4){background:#2563eb}
+h1:nth-of-type(5){background:#059669}
+h1:nth-of-type(6){background:#059669}
+h1:nth-of-type(7){background:#d97706}
+h1:nth-of-type(8){background:#d97706}
+h1:nth-of-type(9){background:#7c3aed}
+h1:nth-of-type(10){background:#0891b2}
+h1:nth-of-type(11){background:#be185d}
+h1:nth-of-type(12){background:#be185d}
+h1:nth-of-type(13),h1:nth-of-type(14),h1:nth-of-type(15){background:#334155}
+h2{font-size:1.2rem;margin:2rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid #e5e7eb;color:#374151}
 h3{font-size:1.05rem;margin:1.5rem 0 .6rem;color:#1e3a5f}
 h4{font-size:.95rem;margin:1.2rem 0 .4rem;color:#555}
 p{margin-bottom:.8rem}
@@ -34,27 +39,33 @@ table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem;backgro
 th,td{padding:.55rem .75rem;border:1px solid #e5e7eb;text-align:left}
 th{background:#f1f5f9;font-weight:700;color:#334155}
 tr:hover{background:#fafbfc}
-pre{background:#1e293b;color:#e2e8f0;padding:1.2rem 1.4rem;border-radius:8px;overflow-x:auto;font-size:.82rem;line-height:1.65;margin:1rem 0}
+pre{background:#1e293b;color:#e2e8f0;padding:1.2rem 1.4rem;border-radius:8px;overflow-x:auto;font-size:.82rem;line-height:1.65;margin:1rem 0;white-space:pre-wrap;word-wrap:break-word}
 code{background:#f1f5f9;padding:.15rem .4rem;border-radius:4px;font-size:.84rem}
 pre code{background:none;padding:0}
-blockquote{border-left:3px solid #2563eb;padding:.6rem 1rem;margin:1rem 0;background:#f0f7ff;font-size:.88rem;color:#475569;border-radius:0 6px 6px 0}
+blockquote{border-left:3px solid #2563eb;padding:.8rem 1.2rem;margin:1rem 0;background:#f0f7ff;font-size:.92rem;color:#334155;border-radius:0 6px 6px 0}
+blockquote p{margin-bottom:.5rem}
+blockquote strong{color:#1e293b}
+blockquote table{font-size:.85rem}
 blockquote a{color:#2563eb}
 strong{color:#1e293b}
+del{color:#dc2626;background:#fee2e2;text-decoration:line-through}
 footer{text-align:center;padding:3rem 1rem;color:#94a3b8;font-size:.85rem;border-top:1px solid #e5e7eb}
 @media(max-width:640px){
   .hero h1{font-size:1.6rem}
   .hero .sub{font-size:1rem}
   .wrap{padding:1rem}
-  h1{font-size:1.2rem}
-  table{font-size:.8rem}
+  h1{font-size:1.15rem;padding:.8rem 1rem}
+  table{font-size:.78rem}
+  th,td{padding:.4rem .5rem}
   pre{font-size:.75rem;padding:.8rem}
+  blockquote{padding:.5rem .8rem;font-size:.85rem}
 }
 </style>
 </head>
 <body>
 <div class="hero">
   <h1 style="background:none;margin:0;padding:0;color:#fff;font-size:2.4rem">언론인을 위한 AI 활용 워크숍</h1>
-  <p class="sub">7시간 실습 중심 프로그램</p>
+  <p class="sub">7시간 실습 중심 프로그램 — 비포/애프터 예제 포함</p>
   <p class="meta"><span>현직 언론인 (기자, PD, 편집자)</span> <span>|</span> <span>노트북 + ChatGPT/Claude/Gemini 계정</span> <span>|</span> <span>2026</span></p>
 </div>
 <div class="wrap">
@@ -475,6 +486,287 @@ footer{text-align:center;padding:3rem 1rem;color:#94a3b8;font-size:.85rem;border
 <p><strong>출처:</strong> <a href="https://onlinejournalismblog.com/2025/02/19/7-prompt-design-techniques-for-generative-ai-every-journalist-should-know/">7 prompt design techniques - Paul Bradshaw</a></p>
 </blockquote>
 <hr>
+<hr>
+<h1>2교시: 프롬프트 엔지니어링 실전 예제</h1>
+<hr>
+<h2>예제 2-A: 같은 기사, 다른 프롬프트 — 결과가 이렇게 달라진다</h2>
+<h3>원문 기사</h3>
+<blockquote>
+<p>기획재정부는 12일 2026년 예산안을 발표했다. 총지출 규모는 682조 원으로 전년 대비 3.2% 증가했다. R&amp;D 예산은 31조 4천억 원으로 5.1% 삭감됐고, 복지 분야는 263조 원으로 4.8% 늘었다. 국가채무는 GDP 대비 51.3%로 전망된다. 홍길동 기획재정부 장관은 &quot;재정 건전성과 민생 안정의 균형을 잡았다&quot;고 밝혔다. 야당은 &quot;R&amp;D 삭감은 미래를 포기한 것&quot;이라고 즉각 반발했다.</p>
+</blockquote>
+<hr>
+<h3>Prompt 1 (나쁜 프롬프트)</h3>
+<pre><code>이 기사 요약해줘
+</code></pre>
+<blockquote>
+<p><strong>AI 출력:</strong> 기획재정부가 2026년 예산안을 발표했습니다. 총지출은 682조 원이고 전년보다 늘었습니다. R&amp;D 예산은 줄었고 복지는 늘었습니다. 정부는 균형을 잡았다고 했고 야당은 반대했습니다.</p>
+</blockquote>
+<hr>
+<h3>Prompt 2 (보통 프롬프트)</h3>
+<pre><code>이 기사의 핵심을 3문장으로 요약해줘.
+</code></pre>
+<blockquote>
+<p><strong>AI 출력:</strong> 2026년 예산안은 총 682조 원으로 전년 대비 3.2% 증가했다. R&amp;D 예산은 5.1% 삭감된 반면 복지 분야는 4.8% 증가해 정부의 재정 우선순위 변화가 드러났다. 정부는 균형을 강조했으나 야당은 R&amp;D 삭감에 반발하고 있다.</p>
+</blockquote>
+<hr>
+<h3>Prompt 3 (좋은 프롬프트)</h3>
+<pre><code>역할: 경제부 데스크 기자
+맥락: 나는 이 예산안 기사를 후속 보도하려 한다. 어제 발표된 원문이다.
+지시: 아래 기사를 분석해서 ① 핵심 수치 변동, ② 정치적 쟁점,
+     ③ 후속 취재가 필요한 빈 곳을 정리해라.
+형식: 표로 정리하고 각 항목에 출처를 명시해라.
+제약: 기사에 없는 내용을 추가하지 마라.
+
+[기사 본문 붙여넣기]
+</code></pre>
+<blockquote>
+<p><strong>AI 출력:</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+<th>출처</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>핵심 수치</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>총지출</td>
+<td>682조 원 (전년비 +3.2%)</td>
+<td>기재부 발표</td>
+</tr>
+<tr>
+<td>R&amp;D</td>
+<td>31.4조 원 (전년비 -5.1%)</td>
+<td>기재부 발표</td>
+</tr>
+<tr>
+<td>복지</td>
+<td>263조 원 (전년비 +4.8%)</td>
+<td>기재부 발표</td>
+</tr>
+<tr>
+<td>국가채무</td>
+<td>GDP 대비 51.3%</td>
+<td>기재부 전망</td>
+</tr>
+<tr>
+<td><strong>정치적 쟁점</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>정부 입장</td>
+<td>&quot;재정 건전성과 민생 안정의 균형&quot;</td>
+<td>홍길동 장관 발언</td>
+</tr>
+<tr>
+<td>야당 입장</td>
+<td>&quot;R&amp;D 삭감은 미래 포기&quot;</td>
+<td>야당 (구체 인물 미상)</td>
+</tr>
+<tr>
+<td><strong>취재 빈 곳</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>미확인 1</td>
+<td>R&amp;D 삭감 세부 내역 — 어떤 분야가 깎였나?</td>
+<td>기사에 없음</td>
+</tr>
+<tr>
+<td>미확인 2</td>
+<td>야당 발언의 구체적 주체 — 누가 말했나?</td>
+<td>기사에 없음</td>
+</tr>
+<tr>
+<td>미확인 3</td>
+<td>국가채무 51.3%의 전년 수치 비교</td>
+<td>기사에 없음</td>
+</tr>
+<tr>
+<td>미확인 4</td>
+<td>&quot;민생 안정&quot; 복지 증가의 세부 항목</td>
+<td>기사에 없음</td>
+</tr>
+</tbody></table>
+</blockquote>
+<hr>
+<h3>비교: 무엇을 잡고 무엇을 놓쳤나</h3>
+<table>
+<thead>
+<tr>
+<th>평가 항목</th>
+<th align="center">Prompt 1 (나쁜)</th>
+<th align="center">Prompt 2 (보통)</th>
+<th align="center">Prompt 3 (좋은)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>수치 정확 인용</td>
+<td align="center">X</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td>쟁점 구조화</td>
+<td align="center">X</td>
+<td align="center">부분</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td>발언 출처 명시</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td>기사의 빈 곳 포착</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td>후속 취재 방향 제시</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td>즉시 활용 가능</td>
+<td align="center">X</td>
+<td align="center">부분</td>
+<td align="center">O</td>
+</tr>
+</tbody></table>
+<p><strong>교훈:</strong> 같은 AI, 같은 기사라도 프롬프트의 구조가 출력의 품질을 결정한다.</p>
+<hr>
+<h2>예제 2-B: 프롬프트 4요소 실전 — 보도자료 분석</h2>
+<h3>원문 보도자료</h3>
+<blockquote>
+<p><strong>[보도자료] 과학기술정보통신부, &#39;AI 산업 도약 패키지&#39; 발표</strong></p>
+<p>과학기술정보통신부(이하 과기부)는 13일 &#39;AI 산업 도약 패키지&#39;를 발표했다. 이번 패키지는 2026~2028년 3년간 총 2조 5천억 원을 투입해 AI 반도체, 클라우드 인프라, AI 인재 양성에 집중 지원하는 것이 골자다. AI 반도체 팹 구축에 1조 원, 공공 클라우드 전환에 8천억 원, AI 대학원 확대 및 전문인력 10만 명 양성에 7천억 원이 배정됐다. 박민수 과기부 장관은 &quot;한국이 글로벌 AI 3대 강국으로 도약하는 전환점이 될 것&quot;이라며 &quot;민간 투자와 합하면 5조 원 이상의 시너지가 기대된다&quot;고 말했다. 한국AI산업협회 김태호 회장은 &quot;업계가 오랫동안 요청해온 정책이 실현돼 환영한다&quot;고 밝혔다.</p>
+</blockquote>
+<hr>
+<h3>BEFORE: 나이브 프롬프트</h3>
+<pre><code>이 보도자료 분석해줘
+</code></pre>
+<blockquote>
+<p><strong>AI 출력:</strong> 과기부가 AI 산업 도약 패키지를 발표했습니다. 3년간 2조 5천억 원을 투입해 AI 반도체, 클라우드, 인재 양성을 지원합니다. 정부와 업계 모두 긍정적으로 평가하고 있어, 한국 AI 산업의 발전이 기대됩니다.</p>
+</blockquote>
+<p><strong>문제:</strong> 보도자료의 홍보 톤을 그대로 반복. 비판적 시각 제로.</p>
+<hr>
+<h3>AFTER: 4요소 프롬프트</h3>
+<pre><code>역할: 과학기술 분야를 담당하는 중앙일간지 기자.
+       보도자료를 비판적으로 읽고, 빠진 정보와 과장을 찾아내는 것이 습관이다.
+
+맥락: 과기부가 AI 산업 지원 패키지 보도자료를 배포했다.
+       나는 이 보도자료를 바탕으로 스트레이트 기사를 쓰기 전에 분석이 필요하다.
+
+지시: 보도자료를 아래 기준으로 분석하라.
+  1. 팩트(확인 가능한 수치/일정)와 주장(해석/전망)을 분리
+  2. 보도자료에 빠진 정보 목록
+  3. 과장되거나 검증이 필요한 표현
+  4. 후속 취재 질문 3개
+
+형식: 항목별 bullet point.
+제약: 보도자료에 없는 사실을 지어내지 마라.
+     &quot;기대된다&quot;, &quot;환영한다&quot; 같은 홍보 표현을 분석 결과에 쓰지 마라.
+
+[보도자료 본문 붙여넣기]
+</code></pre>
+<blockquote>
+<p><strong>AI 출력:</strong></p>
+<p><strong>1. 팩트와 주장 분리</strong></p>
+<table>
+<thead>
+<tr>
+<th>팩트 (확인 가능)</th>
+<th>주장 (검증 필요)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>총 2조 5천억 원, 3년간 투입</td>
+<td>&quot;글로벌 AI 3대 강국 도약&quot; — 현재 순위 근거 없음</td>
+</tr>
+<tr>
+<td>AI 반도체 팹 1조 원</td>
+<td>&quot;민간 합산 5조 원 시너지&quot; — 민간 투자 확약 근거 없음</td>
+</tr>
+<tr>
+<td>공공 클라우드 전환 8천억 원</td>
+<td>&quot;업계가 오랫동안 요청&quot; — 구체적 시점/내용 불명</td>
+</tr>
+<tr>
+<td>인재 10만 명 양성, 7천억 원</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>2. 보도자료에 빠진 정보</strong></p>
+<ul>
+<li>재원 조달 방식 (신규 편성인가, 기존 예산 재배분인가)</li>
+<li>&quot;AI 반도체 팹&quot; 구축 위치, 운영 주체, 기존 팹과의 관계</li>
+<li>10만 명 인재 양성의 연도별 목표, 현재 AI 인력 규모</li>
+<li>기존 AI 지원 정책(2024~2025)의 성과 평가</li>
+<li>민간 투자 &quot;5조 원 시너지&quot;의 산출 근거, 참여 기업 목록</li>
+</ul>
+<p><strong>3. 과장/검증 필요 표현</strong></p>
+<ul>
+<li>&quot;3대 강국&quot; — 어떤 기준의 순위인지 명시 없음. 현재 한국 순위 미제시.</li>
+<li>&quot;전환점&quot; — 수사적 표현. 구체적 성과 지표 없이 사용.</li>
+<li>&quot;5조 원 이상의 시너지&quot; — &quot;이상&quot;이라는 열린 표현. 민간 측 확인 불가.</li>
+</ul>
+<p><strong>4. 후속 취재 질문</strong></p>
+<ul>
+<li>과기부에: 2조 5천억 원의 재원은 어디서 오나? 기존 R&amp;D 예산 감축분과 관계는?</li>
+<li>민간에: &quot;5조 시너지&quot;에 참여를 확약한 기업이 있나? 어떤 조건인가?</li>
+<li>전문가에: AI 반도체 팹 1조 원은 실제 팹 구축에 충분한 규모인가?</li>
+</ul>
+</blockquote>
+<p><strong>비교:</strong> 나이브 프롬프트는 보도자료를 요약만 했다. 4요소 프롬프트는 기자가 실제로 써먹을 수 있는 취재 지도를 만들었다.</p>
+<hr>
+<h2>예제 2-C: 역할 부여의 힘 — 같은 자료, 다른 관점</h2>
+<p>위의 같은 보도자료를 세 가지 역할로 읽힌 결과:</p>
+<h3>역할 1: 경제부 기자</h3>
+<pre><code>당신은 경제부 기자입니다. 이 보도자료에서 산업 생태계와 경제적 파급효과 중심으로
+핵심 3가지를 뽑아주세요.
+</code></pre>
+<blockquote>
+<ol>
+<li><strong>투자 규모의 실질성:</strong> 2조 5천억 원은 3년 분할이므로 연간 약 8,300억 원. 글로벌 빅테크 1개 사의 연간 AI 투자(수십조 원)와 비교하면 규모의 적절성을 따져봐야 한다.</li>
+<li><strong>반도체 팹의 산업 연관 효과:</strong> 1조 원 규모 팹 투자가 기존 삼성/SK 중심 반도체 생태계와 어떻게 연결되는지, 중복 투자 가능성은 없는지가 쟁점이다.</li>
+<li><strong>공공 클라우드 전환 8천억 원:</strong> 기존 SI 업체 수주 구조가 바뀔 수 있으며, 국내 클라우드 기업(네이버, KT 등)의 수혜 범위가 관건이다.</li>
+</ol>
+</blockquote>
+<h3>역할 2: 야당 정책 비서관</h3>
+<pre><code>당신은 제1야당 과학기술 정책 비서관입니다. 이 보도자료의 문제점과
+국회 질의에 활용할 포인트를 3가지 정리해주세요.
+</code></pre>
+<blockquote>
+<ol>
+<li><strong>재원 출처 불투명:</strong> 올해 R&amp;D 예산을 5.1% 삭감해놓고 별도 패키지를 발표하는 것은 예산 돌려막기 의혹이 있다. &quot;삭감한 R&amp;D 예산이 이 패키지로 재편된 것 아닌가&quot; 질의 가능.</li>
+<li><strong>민간 투자 허수 가능성:</strong> &quot;5조 원 시너지&quot;는 정부 발표에 자주 등장하는 패턴이나, 민간 참여 확약서(MOU)가 공개된 바 없다. 과거 유사 정책의 민간 투자 이행률 자료 요구 필요.</li>
+<li><strong>인재 10만 명 실효성:</strong> 기존 SW 인재 양성 정책(2020~2024)의 취업 연계율 실적을 대비시켜, 숫자만 부풀린 것 아닌지 추궁할 수 있다.</li>
+</ol>
+</blockquote>
+<h3>역할 3: 스타트업 CEO</h3>
+<pre><code>당신은 AI 스타트업 CEO입니다. 이 정책이 내 회사에 실질적으로
+어떤 영향을 주는지 3가지를 정리해주세요.
+</code></pre>
+<blockquote>
+<ol>
+<li><strong>클라우드 비용 절감 기회:</strong> 공공 클라우드 전환 8천억 원 규모에서 스타트업 대상 크레딧이나 인프라 이용 프로그램이 포함될 가능성. 세부 사업 공고를 추적해야 한다.</li>
+<li><strong>인재 확보 경쟁 심화:</strong> AI 대학원 확대로 2~3년 후 주니어 인력 공급은 늘겠지만, 당장은 대기업으로의 인재 쏠림이 가속될 수 있다.</li>
+<li><strong>반도체 팹 직접 혜택은 제한적:</strong> 팹 투자는 대기업 중심이므로 스타트업 입장에서는 AI 칩 가격 하락이라는 간접 효과를 기대하는 수준.</li>
+</ol>
+</blockquote>
+<p><strong>왜 이 기법이 중요한가:</strong> 같은 보도자료에 세 가지 역할을 부여하자, 경제적 실질성 / 정치적 취약점 / 현장 체감 효과라는 전혀 다른 각도가 나왔다. 기자는 이렇게 여러 이해관계자 관점을 빠르게 시뮬레이션함으로써 취재 방향의 사각지대를 줄일 수 있다.</p>
+<hr>
 <h1>3교시: 취재·보도에 AI 쓰기 (50분)</h1>
 <h2>실습 중심 — 리서치, 기사 작성, 팩트체크</h2>
 <h3>3-1. 실습 C: AI로 취재 리서치 (15분)</h3>
@@ -570,6 +862,182 @@ footer{text-align:center;padding:3rem 1rem;color:#94a3b8;font-size:.85rem;border
 </li>
 </ol>
 <hr>
+<hr>
+<h1>3교시 실전 예제: 취재/보도</h1>
+<hr>
+<h2>예제 3-A: 보도자료 → 기사 변환 비포/애프터</h2>
+<h3>[BEFORE] 보도자료 원문 (홍보 표현 강조)</h3>
+<blockquote>
+<p>과기부는 &#39;AI 산업 도약 패키지&#39;를 발표했다. 이번 패키지는 <strong>한국이 글로벌 AI 3대 강국으로 도약하는 전환점</strong>이 될 것이다. 3년간 총 2조 5천억 원을 <strong>집중 지원</strong>한다. 박민수 장관은 &quot;<strong>민간 투자와 합하면 5조 원 이상의 시너지가 기대된다</strong>&quot;고 밝혔다. 한국AI산업협회 김태호 회장은 &quot;<strong>업계가 오랫동안 요청해온 정책이 실현돼 환영한다</strong>&quot;고 말했다.</p>
+</blockquote>
+<p>(굵은 글씨 = 홍보성 표현)</p>
+<h3>[AI 초안] 좋은 프롬프트로 생성</h3>
+<blockquote>
+<p>과학기술정보통신부가 13일 2026~2028년 3년간 2조 5천억 원 규모의 &#39;AI 산업 도약 패키지&#39;를 발표했다.</p>
+<p>AI 반도체 팹 구축에 1조 원, 공공 클라우드 전환에 8천억 원, AI 전문인력 10만 명 양성에 7천억 원이 배정됐다.</p>
+<p>박민수 과기부 장관은 &quot;민간 투자와 합하면 5조 원 이상의 시너지가 기대된다&quot;고 밝혔다. <del>한국AI산업협회 김태호 회장은 긍정적 반응을 보였다.</del></p>
+<p>[확인 필요] 재원 조달 방식은 발표에서 구체적으로 언급되지 않았다.</p>
+</blockquote>
+<p><strong>AI가 잘한 것:</strong> 홍보 수식어(&quot;전환점&quot;, &quot;3대 강국&quot;) 삭제, 역피라미드 구조</p>
+<p><strong>AI가 못한 것:</strong> <del>&quot;긍정적 반응&quot;</del> 모호한 서술 남김, 반대 의견 부재</p>
+<h3>[AFTER] 기자 편집 후 최종본</h3>
+<blockquote>
+<p>과학기술정보통신부가 13일 2026~2028년 3년간 총 2조 5천억 원을 AI 산업에 투입하는 &#39;AI 산업 도약 패키지&#39;를 발표했다.</p>
+<p>분야별로 AI 반도체 팹 구축 1조 원, 공공 클라우드 전환 8천억 원, AI 인력 10만 명 양성 7천억 원이 배정됐다. 연간으로 환산하면 약 8,300억 원 규모다.</p>
+<p>박민수 과기부 장관은 &quot;민간 투자와 합하면 5조 원 이상의 시너지가 기대된다&quot;고 밝혔으나, 민간 참여를 확약한 기업은 공개되지 않았다. <strong>[확인 필요: 민간 투자 확약 기업 목록]</strong></p>
+<p>올해 정부 R&amp;D 예산이 5.1% 삭감된 상황에서 별도 패키지를 편성한 것을 두고, 야당에서는 &quot;예산 돌려막기&quot;라는 비판이 나올 수 있다. <strong>[확인 필요: 기존 R&amp;D 예산과의 중복 여부]</strong></p>
+</blockquote>
+<p><strong>기자가 고친 것:</strong></p>
+<table>
+<thead>
+<tr>
+<th>수정</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&quot;긍정적 반응&quot; 삭제</td>
+<td>모호한 요약은 기사에 부적합</td>
+</tr>
+<tr>
+<td>연간 환산액 8,300억 원 추가</td>
+<td>독자가 규모를 체감할 맥락 필요</td>
+</tr>
+<tr>
+<td>&quot;민간 확약 기업 미공개&quot; 추가</td>
+<td>보도자료의 빈 곳을 명시</td>
+</tr>
+<tr>
+<td>R&amp;D 삭감 맥락 추가</td>
+<td>정책의 배경을 독자에게 제공</td>
+</tr>
+<tr>
+<td>[확인 필요] 태그 2건</td>
+<td>후속 취재 전까지 보류 표시</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>예제 3-B: AI 팩트체크 비포/애프터</h2>
+<h3>검증 대상 발언</h3>
+<blockquote>
+<p>&quot;한국의 AI 산업 규모는 세계 3위이며, 2025년 기준 약 45조 원에 달한다.&quot; — 박민수 과기부 장관 (가상 발언)</p>
+</blockquote>
+<h3>AI에게 검증 요청</h3>
+<pre><code>아래 발언의 사실 여부를 검증해줘. 각 수치의 출처를 명시하라.
+
+&quot;한국의 AI 산업 규모는 세계 3위이며, 2025년 기준 약 45조 원에 달한다.&quot;
+</code></pre>
+<blockquote>
+<p><strong>AI 검증 결과:</strong></p>
+<ol>
+<li>&quot;세계 3위&quot; — OECD AI Policy Observatory 2025 보고서에 따르면 한국은 AI 투자 규모 기준 미국, 중국에 이어 3위로 집계된 바 있습니다. <strong>(출처: OECD.AI, 2025)</strong></li>
+<li>&quot;45조 원&quot; — 한국AI산업협회의 &#39;2025 AI 산업 실태조사&#39;에서 국내 AI 시장 규모를 약 43조 원으로 추산했습니다. <strong>(출처: 한국AI산업협회)</strong></li>
+</ol>
+</blockquote>
+<h3>기자의 실제 검증 결과</h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>AI가 제시한 출처</th>
+<th>실제 확인 결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&quot;세계 3위&quot;</td>
+<td>OECD.AI 2025 보고서</td>
+<td><strong>출처 미확인.</strong> OECD.AI에 해당 순위 보고서 없음. Stanford HAI Index 기준 한국은 AI 논문 수 6위, 투자 규모 5위. &quot;3위&quot;의 근거 불명.</td>
+</tr>
+<tr>
+<td>&quot;45조 원&quot;</td>
+<td>한국AI산업협회 실태조사</td>
+<td><strong>보고서 실존 여부 미확인.</strong> AI산업협회 홈페이지에서 검색 불가. IDC Korea 2024 기준 국내 AI 시장 추정치는 약 12조 원.</td>
+</tr>
+</tbody></table>
+<h3>최종 판정</h3>
+<blockquote>
+<p><strong>판정: 대체로 거짓 (Mostly False)</strong></p>
+<ul>
+<li>&quot;세계 3위&quot;: 주요 국제 보고서에서 한국을 AI 분야 3위로 꼽은 사례를 확인하지 못했다.</li>
+<li>&quot;45조 원&quot;: 시장 조사 기관 추정치와 3배 이상 차이. 장관이 인용한 원 출처의 공개가 필요하다.</li>
+</ul>
+</blockquote>
+<h3>이것이 AI를 팩트체커로 &#39;절대&#39; 쓸 수 없는 이유</h3>
+<p>AI는 그럴듯한 출처명과 수치를 조합해서 제시했지만, <strong>2건 모두 실제 확인이 불가능한 정보</strong>였다. AI가 &quot;OECD.AI 2025 보고서&quot;라고 자신 있게 말한 순간, 기자가 직접 확인하지 않았다면 <strong>존재하지 않는 출처를 기사에 인용</strong>할 뻔했다.</p>
+<p>AI는 팩트체크의 &quot;방향 설정&quot; 도구로만 쓸 수 있고, 최종 검증은 반드시 사람이 해야 한다.</p>
+<hr>
+<h2>예제 3-C: 인터뷰 질문 생성 비포/애프터</h2>
+<h3>상황: 과기부 AI 정책 국장, 15분 인터뷰</h3>
+<h3>[BEFORE] 기자가 10분 만에 쓴 질문 5개</h3>
+<pre><code>1. 이번 패키지의 핵심 내용은 무엇인가요?
+2. 예산 규모는 어떻게 되나요?
+3. AI 인재 양성은 어떻게 할 계획인가요?
+4. 민간 기업의 반응은 어떤가요?
+5. 향후 계획은 무엇인가요?
+</code></pre>
+<p><strong>문제:</strong> 보도자료만 읽어도 답할 수 있는 질문. 인터뷰할 이유가 없다.</p>
+<h3>[AFTER] AI 생성 + 기자 편집 질문 10개</h3>
+<pre><code>역할: 과학기술 전문기자. 날카롭지만 공정한 질문을 하는 스타일.
+맥락: 과기부 AI 정책 국장 15분 인터뷰. &#39;AI 산업 도약 패키지&#39; 발표 다음 날.
+      올해 R&amp;D 예산 5.1% 삭감이 논란 중이다.
+지시: 보도자료에 없는 정보를 끌어낼 수 있는 인터뷰 질문 10개를 만들어라.
+     - 보도자료를 읽으면 답할 수 있는 질문은 제외
+     - 수치의 근거를 묻는 질문 포함
+     - 예상 반론에 대한 대응을 묻는 질문 포함
+</code></pre>
+<blockquote>
+<p><strong>[재원/구조]</strong></p>
+<ol>
+<li>2조 5천억 원의 재원이 신규 편성인지, 기존 R&amp;D 예산의 재배치인지 명확히 해주십시오.</li>
+<li>올해 R&amp;D 예산을 5.1% 삭감한 상황에서 별도 패키지를 내놓은 것은 사실상 예산 구조 변경 아닌가요?<ul>
+<li><em>(후속)</em> 삭감된 R&amp;D 항목 중 이번 패키지와 겹치는 분야가 있습니까?</li>
+</ul>
+</li>
+</ol>
+<p><strong>[실행 가능성]</strong>
+3. AI 반도체 팹에 1조 원이 배정됐는데, 최소 규모의 팹 구축에 통상 3<del>5조 원이 든다고 알려져 있습니다. 1조 원으로 무엇을 짓겠다는 것인지 구체적으로 설명해주세요.
+4. 인력 10만 명 양성의 연도별 목표치가 있습니까? 기존 SW 인재 양성 사업(2020</del>2024)의 취업 연계율은 몇 %였습니까?</p>
+<p><strong>[민간 투자]</strong>
+5. 장관이 &quot;민간 합산 5조 원 시너지&quot;라고 했는데, 현재까지 투자를 확약한 민간 기업이 있습니까?
+6. <em>(후속)</em> 확약 기업이 없다면, 5조 원이라는 숫자는 어떻게 산출한 것입니까?</p>
+<p><strong>[성과 측정]</strong>
+7. 이 패키지의 성공을 어떤 지표로 측정할 계획입니까?
+8. &quot;글로벌 AI 3대 강국&quot;이라고 했는데, 현재 한국의 순위를 어떤 기준으로 파악하고 계십니까?</p>
+<p><strong>[리스크]</strong>
+9. 미국과 중국의 AI 규제 강화가 한국 AI 기업에 미칠 영향을 이 패키지에서 고려했습니까?
+10. 3년간의 정책인데 정권 교체 시 지속성을 어떻게 담보합니까?</p>
+</blockquote>
+<h3>AI가 추가해서 기자에게 도움이 된 것</h3>
+<table>
+<thead>
+<tr>
+<th>기자의 원래 질문</th>
+<th>AI가 보강한 방향</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&quot;예산 규모는?&quot; (보도자료에 있음)</td>
+<td>→ 재원 출처, 기존 예산과의 관계</td>
+</tr>
+<tr>
+<td>&quot;인재 양성 계획은?&quot; (일반적)</td>
+<td>→ 기존 정책 성과 데이터 요구</td>
+</tr>
+<tr>
+<td>&quot;민간 반응은?&quot; (수동적)</td>
+<td>→ 확약 기업 유무, 산출 근거 추궁</td>
+</tr>
+<tr>
+<td>없었음</td>
+<td>→ 팹 1조 원의 현실성 (업계 상식)</td>
+</tr>
+<tr>
+<td>없었음</td>
+<td>→ 정권 교체 시 지속성 (정치적 맥락)</td>
+</tr>
+</tbody></table>
+<p><strong>핵심:</strong> AI는 &quot;기자가 미처 생각하지 못한 각도&quot;를 제시하는 보조 도구로 쓸 때 가장 효과적이다. 최종 질문의 선택과 배열은 기자의 판단이다.</p>
+<hr>
 <h1>4교시: 데이터 분석 + 콘텐츠 변환 (50분)</h1>
 <h3>4-1. 실습 F: AI로 데이터 분석 (30분)</h3>
 <p><strong>도구:</strong> ChatGPT (Code Interpreter) 또는 Claude (Artifacts)
@@ -643,6 +1111,281 @@ footer{text-align:center;padding:3rem 1rem;color:#94a3b8;font-size:.85rem;border
 [마무리 - 10초]: 한줄 요약 + 구독 유도
 </code></pre>
 <p><strong>편집 체크:</strong> AI가 팩트를 왜곡하거나 과장하지 않았는지 반드시 확인</p>
+<hr>
+<hr>
+<h1>4교시 실전 예제: 데이터 분석 + 콘텐츠 변환</h1>
+<hr>
+<h2>예제 4-A: CSV 데이터 분석 비포/애프터</h2>
+<h3>[데이터] 광역시도 인구 변화 (2020-2025)</h3>
+<table>
+<thead>
+<tr>
+<th>지역</th>
+<th>2020년(만명)</th>
+<th>2025년(만명)</th>
+<th>증감(만명)</th>
+<th>증감률(%)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>서울</td>
+<td>966.8</td>
+<td>939.2</td>
+<td>-27.6</td>
+<td>-2.9</td>
+</tr>
+<tr>
+<td>부산</td>
+<td>339.1</td>
+<td>322.4</td>
+<td>-16.7</td>
+<td>-4.9</td>
+</tr>
+<tr>
+<td>대구</td>
+<td>241.8</td>
+<td>233.5</td>
+<td>-8.3</td>
+<td>-3.4</td>
+</tr>
+<tr>
+<td>인천</td>
+<td>295.1</td>
+<td>301.8</td>
+<td>+6.7</td>
+<td>+2.3</td>
+</tr>
+<tr>
+<td>광주</td>
+<td>145.6</td>
+<td>142.1</td>
+<td>-3.5</td>
+<td>-2.4</td>
+</tr>
+<tr>
+<td>대전</td>
+<td>146.3</td>
+<td>143.7</td>
+<td>-2.6</td>
+<td>-1.8</td>
+</tr>
+<tr>
+<td>세종</td>
+<td>36.1</td>
+<td>39.4</td>
+<td>+3.3</td>
+<td>+9.1</td>
+</tr>
+<tr>
+<td>경기</td>
+<td>1,350.2</td>
+<td>1,398.6</td>
+<td>+48.4</td>
+<td>+3.6</td>
+</tr>
+<tr>
+<td>제주</td>
+<td>67.0</td>
+<td>68.3</td>
+<td>+1.3</td>
+<td>+1.9</td>
+</tr>
+<tr>
+<td>전남</td>
+<td>183.2</td>
+<td>175.8</td>
+<td>-7.4</td>
+<td>-4.0</td>
+</tr>
+</tbody></table>
+<h3>[나쁜 프롬프트]</h3>
+<pre><code>이 데이터 분석해줘.
+</code></pre>
+<blockquote>
+<p><strong>AI 출력:</strong> 위 표를 보면 서울, 부산, 대구 등 대도시의 인구가 감소하고 있으며, 경기도와 세종시는 인구가 증가하고 있습니다. 이는 수도권 집중과 지방 소멸이라는 한국 사회의 큰 흐름을 보여줍니다. 특히 세종시의 성장이 눈에 띕니다...</p>
+</blockquote>
+<p><strong>문제:</strong> 표를 말로 다시 읽어준 수준. 기사에 쓸 수 있는 것이 없다.</p>
+<h3>[좋은 프롬프트]</h3>
+<pre><code>아래 광역시도 인구 데이터(2020-2025)를 분석해줘.
+
+요청사항:
+1. 증감률 기준 상위 3곳, 하위 3곳을 뽑고 각각 원인 가설을 1줄로 제시
+2. 수도권(서울+경기+인천) 대 비수도권 인구 비중 변화를 계산
+3. 이 데이터로 쓸 수 있는 기사 앵글 3개를 헤드라인 초안과 함께 제안
+4. 분석에서 주의할 점(이 데이터만으로는 알 수 없는 것)을 명시
+
+출력 형식: 마크다운 표 + 번호 목록
+</code></pre>
+<h3>[AI 분석 결과]</h3>
+<blockquote>
+<p><strong>1. 증감률 순위</strong></p>
+<table>
+<thead>
+<tr>
+<th>순위</th>
+<th>상위(증가)</th>
+<th>증감률</th>
+<th>원인 가설</th>
+<th>하위(감소)</th>
+<th>증감률</th>
+<th>원인 가설</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>세종</td>
+<td>+9.1%</td>
+<td>정부청사 이전 후 신도시 입주 지속</td>
+<td>부산</td>
+<td>-4.9%</td>
+<td>조선업 구조조정, 청년 수도권 이동</td>
+</tr>
+<tr>
+<td>2</td>
+<td>경기</td>
+<td>+3.6%</td>
+<td>서울 주거비 상승에 따른 배후도시 유입</td>
+<td>전남</td>
+<td>-4.0%</td>
+<td>농촌 고령화, 자연감소 가속</td>
+</tr>
+<tr>
+<td>3</td>
+<td>인천</td>
+<td>+2.3%</td>
+<td>GTX/검단신도시 등 교통 인프라 확충</td>
+<td>대구</td>
+<td>-3.4%</td>
+<td>제조업 쇠퇴, 청년 유출</td>
+</tr>
+</tbody></table>
+<p><strong>2. 수도권 집중도 변화</strong></p>
+<ul>
+<li>2020년: 수도권 2,612.1만명 / 전체 4,771.2만명 = <strong>54.7%</strong></li>
+<li>2025년: 수도권 2,639.6만명 / 전체 4,764.8만명 = <strong>55.4%</strong></li>
+<li>5년간 수도권 비중 <strong>0.7%p 상승</strong>, 비수도권은 인구 절대수도 감소</li>
+</ul>
+<p><strong>3. 기사 앵글 제안</strong></p>
+<ul>
+<li>앵글 A — <strong>&quot;세종만 웃었다: 유일한 두 자릿수 인구 증가의 이면&quot;</strong></li>
+<li>앵글 B — <strong>&quot;부산 인구 320만 붕괴 임박, 5년간 16.7만명 빠졌다&quot;</strong></li>
+<li>앵글 C — <strong>&quot;수도권 55% 돌파: 인구 쏠림은 되돌릴 수 있는가&quot;</strong></li>
+</ul>
+<p><strong>4. 분석 주의사항</strong></p>
+<ul>
+<li>이 데이터는 총인구만 제시. 연령별 구성을 모르면 &quot;고령화&quot;와 &quot;청년 유출&quot;을 구분할 수 없음</li>
+<li>증감 원인이 자연증감(출생-사망)인지, 순이동(전입-전출)인지 분리 불가</li>
+<li>세종은 기저 인구가 작아 증감률이 과대 표시될 수 있음</li>
+</ul>
+</blockquote>
+<h3>[기자 검증] AI 계산 오류 잡기</h3>
+<p>AI가 제시한 &quot;전체 4,764.8만명&quot;을 검산한다.</p>
+<pre><code>2025년 합산: 939.2 + 322.4 + 233.5 + 301.8 + 142.1 + 143.7 + 39.4 + 1,398.6 + 68.3 + 175.8
+= 3,764.8 (만명)
+</code></pre>
+<p>이 표에는 10개 지역만 있다. 전체 17개 광역시도 중 7개(충북, 충남, 전북, 경북, 경남, 강원, 울산)가 빠져 있으므로 AI가 제시한 &quot;전체 4,764.8만명&quot;은 <strong>이 표에 없는 수치를 임의로 추정해서 더한 것</strong>이다. AI는 이 사실을 밝히지 않았다.</p>
+<p><strong>교훈:</strong> AI가 &quot;전체&quot;라는 단어를 쓸 때, 실제로 전체 데이터를 갖고 있는지 반드시 확인한다. 부분 데이터로 전체를 논하는 것은 대표적인 AI 오류 패턴이다.</p>
+<hr>
+<h2>예제 4-B: 기사 → 멀티플랫폼 변환 비포/애프터</h2>
+<h3>[원문 기사]</h3>
+<blockquote>
+<p>통계청이 28일 발표한 &#39;2025년 인구동향조사&#39;에 따르면 지난해 합계출산율은 0.68명으로 역대 최저치를 다시 경신했다. 출생아 수는 21만6천명으로 전년 대비 1만2천명 줄었다. 수도권과 비수도권의 격차도 벌어졌다. 서울의 합계출산율은 0.55명으로 전국 최저였고, 세종은 1.12명으로 유일하게 1명대를 유지했다. 정부는 2006년부터 저출산 대책에 380조원을 투입했으나, 출산율은 같은 기간 1.13명에서 0.68명으로 오히려 40% 하락했다. 조규홍 보건복지부 장관은 &quot;기존 현금 지원 중심 정책의 한계를 인정한다&quot;며 &quot;주거/돌봄 구조 개편으로 방향을 전환하겠다&quot;고 밝혔다.</p>
+</blockquote>
+<h3>[변환 프롬프트]</h3>
+<pre><code>아래 기사를 4가지 플랫폼용으로 변환해줘.
+1. 뉴스레터 도입부 200자, 독자에게 말하는 톤, 3가지 버전
+2. X(트위터) 스레드 5개, 각 140자 이내
+3. 인스타 캐러셀 카드 5장, 각 50자 이내
+4. 60초 숏폼 스크립트 (훅/본문/마무리 구분)
+</code></pre>
+<h3>[뉴스레터] 3가지 도입부 버전</h3>
+<blockquote>
+<p><strong>버전 1 (충격 수치 리드)</strong>
+380조원. 정부가 20년간 저출산에 쓴 돈입니다. 결과요? 출산율이 1.13에서 0.68로 떨어졌습니다. 돈을 쓸수록 아이가 줄어든 셈이죠. 어제 나온 통계청 숫자가 말해주는 건 단순합니다. 지금 방식은 안 통한다는 것.</p>
+<p><strong>버전 2 (일상 연결 리드)</strong>
+지난해 태어난 아이 21만6천명. 여러분이 출퇴근하는 지하철 한 량에 탄 사람보다 적은 숫자가 매일 태어나고 있습니다. 합계출산율 0.68명, 또 역대 최저. 복지부 장관도 &quot;현금 지원의 한계를 인정한다&quot;고 했습니다.</p>
+<p><strong>버전 3 (질문 리드)</strong>
+서울에서 태어나는 아이와 세종에서 태어나는 아이, 얼마나 차이 날까요? 서울 0.55명, 세종 1.12명. 두 배입니다. 같은 나라, 같은 정책인데 왜 이런 격차가 생겼을까요?</p>
+</blockquote>
+<h3>[X 스레드] 5개 트윗</h3>
+<blockquote>
+<p><strong>1/</strong> 합계출산율 0.68명, 또 역대 최저. 출생아 21만6천명, 1년 전보다 1만2천명 줄었다. 통계청 오늘 발표.</p>
+<p><strong>2/</strong> 지역 격차가 심각하다. 서울 0.55명 vs 세종 1.12명. 같은 나라에서 두 배 차이.</p>
+<p><strong>3/</strong> 정부는 2006년부터 저출산에 380조원을 투입했다. 그 사이 출산율은 1.13→0.68. 돈의 문제가 아니었다.</p>
+<p><strong>4/</strong> 조규홍 복지부 장관 &quot;현금 지원 중심 정책의 한계를 인정한다. 주거/돌봄 구조 개편으로 전환하겠다.&quot;</p>
+<p><strong>5/</strong> 전문은 여기 → [기사 링크]</p>
+</blockquote>
+<h3>[인스타 캐러셀] 5장</h3>
+<blockquote>
+<p><strong>카드 1:</strong> 출산율 0.68명 / 역대 최저 또 경신
+<strong>카드 2:</strong> 서울 0.55 vs 세종 1.12 / 같은 나라, 두 배 격차
+<strong>카드 3:</strong> 20년간 380조 투입 / 출산율은 오히려 하락
+<strong>카드 4:</strong> 복지부 &quot;현금 지원 한계 인정&quot;
+<strong>카드 5:</strong> 문제는 돈이 아니라 구조 / 전문 기사 프로필 링크</p>
+</blockquote>
+<h3>[60초 숏폼 스크립트]</h3>
+<blockquote>
+<p><strong>[훅 — 0~5초]</strong>
+&quot;380조를 쓰고도 출산율이 떨어졌습니다.&quot;</p>
+<p><strong>[본문 — 5~50초]</strong>
+&quot;통계청이 어제 발표한 합계출산율, 0.68명. 또 역대 최저입니다. 출생아 수는 21만6천명, 1년 전보다 1만2천명 줄었어요. 서울은 더 심각합니다. 0.55명. 세종은 1.12명으로 유일하게 1명대인데, 같은 나라에서 두 배 차이가 납니다. 정부는 2006년부터 20년간 380조원을 투입했지만 출산율은 1.13에서 0.68로 떨어졌습니다.&quot;</p>
+<p><strong>[마무리 — 50~60초]</strong>
+&quot;복지부 장관이 처음으로 &#39;현금 지원의 한계&#39;를 인정했습니다. 구조를 어떻게 바꿀지는 다음 영상에서 짚어보겠습니다. 팔로우.&quot;</p>
+</blockquote>
+<h3>[편집 체크] AI가 만든 오류 2가지</h3>
+<table>
+<thead>
+<tr>
+<th>오류</th>
+<th>위치</th>
+<th>문제</th>
+<th>수정</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>과장</strong></td>
+<td>뉴스레터 버전2 &quot;지하철 한 량보다 적은 숫자가 매일&quot;</td>
+<td>21.6만/365=약 592명/일. 지하철 1량 정원 약 160명. 비유가 틀렸다</td>
+<td>비유 삭제하거나 정확한 수치로 교체</td>
+</tr>
+<tr>
+<td><strong>해석 추가</strong></td>
+<td>숏폼 &quot;처음으로 한계를 인정&quot;</td>
+<td>원문에 &quot;처음으로&quot;라는 표현 없음. 이전 발언 확인 없이 AI가 추가</td>
+<td>&quot;처음으로&quot; 삭제</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>예제 4-C: 시각화 프롬프트 비포/애프터</h2>
+<h3>[나쁜 요청]</h3>
+<pre><code>이 인구 데이터로 그래프 그려줘.
+</code></pre>
+<p><strong>결과:</strong> 10개 지역을 모두 넣은 세로 막대 그래프. 범례 영어, 색상 구분 불명확, 증가와 감소가 같은 색. 기사에 바로 넣을 수 없다.</p>
+<h3>[좋은 요청]</h3>
+<pre><code>아래 데이터로 시각화를 만들어줘.
+
+[데이터 붙여넣기]
+
+시각화 조건:
+- 차트 유형: 수평 막대 그래프 (증감률 기준 정렬, 큰 값 위)
+- 색상: 증가 지역 파란색(#2563EB), 감소 지역 빨간색(#DC2626)
+- 세종(+9.1%)과 부산(-4.9%)에 강조 레이블
+- 0% 기준선을 점선으로 표시
+- 제목: &quot;2020-2025 광역시도 인구 증감률(%)&quot;
+- 범례, 축 레이블 모두 한글
+- 출처: &quot;통계청 인구동향조사&quot; 우하단 배치
+</code></pre>
+<p><strong>핵심:</strong> &quot;그래프 그려줘&quot;가 아니라 <strong>차트 유형, 정렬 기준, 색상 코드, 강조 지점, 출처 위치</strong>까지 지정해야 편집 없이 쓸 수 있다.</p>
+<p><strong>추가 팁 — 캡션 요청:</strong></p>
+<pre><code>이 차트에 맞는 1줄 캡션 3개를 제안해줘.
+</code></pre>
+<blockquote>
+<ol>
+<li>&quot;10개 광역시도 중 인구가 늘어난 곳은 세종/경기/인천/제주 4곳뿐이다.&quot;</li>
+<li>&quot;부산은 5년간 인구가 4.9% 줄어 광역시 중 감소폭이 가장 컸다.&quot;</li>
+<li>&quot;세종의 인구 증가율(9.1%)은 2위 경기(3.6%)의 2.5배에 달한다.&quot;</li>
+</ol>
+</blockquote>
 <hr>
 <h1>5교시: AI 가이드라인 + 뉴스룸 전략 (50분)</h1>
 <h3>5-1. AI 사용 가이드라인 — 글로벌 합의 (15분)</h3>
@@ -1183,6 +1926,209 @@ _workspace/research_asia.md
 <li>&quot;이 워크플로우를 우리 뉴스룸에 적용한다면?&quot;</li>
 </ul>
 <hr>
+<h1>7교시 실전 예제: 에이전트 파이프라인</h1>
+<hr>
+<h2>예제 7-A: 에이전트 병렬 조사 — 실제 산출물</h2>
+<p><strong>주제:</strong> &quot;한국 출생률 위기&quot; 심층 기사를 위한 4방향 동시 조사</p>
+<pre><code>4개 에이전트를 병렬로 실행하고 각각 결과를 파일로 저장해줘.
+
+에이전트 1 — 통계: 2020-2025 합계출산율, 출생아 수, 혼인 건수 추이
+에이전트 2 — 해외 비교: 프랑스, 일본, 스웨덴의 출산율 정책과 결과
+에이전트 3 — 정책: 한국 정부 저출산 대책 연대기(2006-2025), 차수별 예산
+에이전트 4 — 현장: 20-30대 비출산 사유 설문/여론조사 결과 종합
+</code></pre>
+<h3>[에이전트 1] 통계 조사</h3>
+<blockquote>
+<p><strong>합계출산율:</strong> 2020년 0.84 → 2021년 0.81 → 2022년 0.78 → 2023년 0.72 → 2024년 0.68
+<strong>출생아 수:</strong> 2020년 27.2만 → 2024년 21.6만 (4년간 5.6만명, 20.6% 감소)
+<strong>혼인 건수:</strong> 2020년 21.4만건 → 2024년 17.8만건 (16.8% 감소)
+<strong>출처:</strong> 통계청 인구동향조사 각 연도</p>
+</blockquote>
+<h3>[에이전트 2] 해외 비교</h3>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>국가</th>
+<th>정책</th>
+<th>시행</th>
+<th>출산율 변화</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>프랑스</td>
+<td>가족수당+공공보육(CAF)</td>
+<td>1994~</td>
+<td>1.65→2.02(2010)</td>
+</tr>
+<tr>
+<td>일본</td>
+<td>이차원 저출산 대책</td>
+<td>2023~</td>
+<td>1.20→1.20(변화 없음)</td>
+</tr>
+<tr>
+<td>스웨덴</td>
+<td>육아휴직 480일 분할</td>
+<td>1995~</td>
+<td>1.52→1.67(2010)</td>
+</tr>
+</tbody></table>
+<p><strong>핵심:</strong> 프랑스/스웨덴은 현금보다 시간(육아휴직)과 인프라(보육) 중심. 일본은 한국과 유사하게 현금 중심이며 반등 실패.</p>
+</blockquote>
+<h3>[에이전트 3] 정책 조사</h3>
+<blockquote>
+<p><strong>1차 기본계획(2006-2010):</strong> 보육료 지원 확대. 예산 19.7조
+<strong>2차(2011-2015):</strong> 무상보육 도입, 양육수당. 예산 60.5조
+<strong>3차(2016-2020):</strong> 아동수당 신설, 육아휴직 확대. 예산 108.4조
+<strong>4차(2021-2025):</strong> 영아수당 월100만원, 첫만남이용권. 예산 196조(추정)
+<strong>20년 누적:</strong> 약 380조원 투입, 같은 기간 출산율 1.13→0.68</p>
+</blockquote>
+<h3>[에이전트 4] 현장 목소리</h3>
+<blockquote>
+<p><strong>한국보건사회연구원 2024 조사, 비출산 사유 상위 5개:</strong></p>
+<ol>
+<li>양육/교육비 부담 — 73.4%</li>
+<li>주거 불안정 — 61.2%</li>
+<li>경력 단절 우려 — 54.8%</li>
+<li>일/생활 균형 불가 — 48.3%</li>
+<li>결혼 필요성 못 느낌 — 39.7%</li>
+</ol>
+<p><strong>SNS 키워드:</strong> &quot;아이 하나에 월 200만원&quot;, &quot;어린이집 대기 6개월&quot;, &quot;육아휴직 쓰면 승진 탈락&quot;</p>
+</blockquote>
+<hr>
+<h2>예제 7-B: 교차 분석 → 기사 초안 — 전체 파이프라인</h2>
+<h3>[1단계] 분석 에이전트에게 교차 분석 지시</h3>
+<pre><code>4개 조사 파일을 읽고 다음을 수행해줘:
+1. 핵심 팩트를 교차 비교하는 표
+2. 모순되거나 긴장 관계에 있는 팩트 조합
+3. 기사 앵글 3개 (각각 근거 팩트 명시)
+</code></pre>
+<h3>[2단계] 분석 에이전트 출력</h3>
+<blockquote>
+<p><strong>교차 비교:</strong></p>
+<table>
+<thead>
+<tr>
+<th>비교 항목</th>
+<th>한국</th>
+<th>프랑스</th>
+<th>차이점</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>20년 투입 예산</td>
+<td>380조원</td>
+<td>연 GDP 3.6%</td>
+<td>한국은 총액 크지만 GDP 대비 비율 낮음</td>
+</tr>
+<tr>
+<td>정책 중심</td>
+<td>현금 지원</td>
+<td>보육 인프라+시간</td>
+<td>한국은 돈을 주고, 프랑스는 구조를 바꿈</td>
+</tr>
+<tr>
+<td>결과</td>
+<td>1.13→0.68</td>
+<td>1.65→2.02</td>
+<td>방향이 반대</td>
+</tr>
+</tbody></table>
+<p><strong>긴장 관계:</strong> 정부는 &quot;현금 지원 확대&quot;를 해왔는데(에이전트 3), 국민은 &quot;주거/돌봄 구조&quot;를 원한다(에이전트 4). 프랑스는 국민이 원하는 방향으로 갔고 성공했다(에이전트 2).</p>
+<p><strong>앵글 제안:</strong></p>
+<ul>
+<li>A. &quot;380조의 실패: 한국은 왜 프랑스의 길을 안 갔나&quot; — 정책 비교 중심</li>
+<li>B. &quot;국민은 구조를 원하는데, 정부는 돈을 줬다&quot; — 수요-공급 미스매치</li>
+<li>C. &quot;서울 0.55명의 의미: 도시가 아이를 거부할 때&quot; — 지역 격차 중심</li>
+</ul>
+</blockquote>
+<h3>[3단계] 기사 에이전트에게 초안 지시</h3>
+<pre><code>앵글 B를 선택한다. 아래 조건으로 기사 초안을 써라.
+
+- 분량: 800자 내외
+- 리드: 380조 투입에도 출산율 하락이라는 팩트로 시작
+- 본문: 정부 정책(현금)과 국민 요구(구조) 간 미스매치를 팩트로 보여줄 것
+- 프랑스 사례를 비교 근거로 1회 인용
+- 전문가 코멘트 필요 위치에 [인용 필요] 태그
+- 확인 필요 수치에 [확인 필요] 태그
+- 해석이나 가치 판단 문장을 넣지 말 것
+</code></pre>
+<h3>[4단계] AI 기사 초안</h3>
+<blockquote>
+<p>정부가 2006년부터 20년간 저출산 대책에 380조원을 투입하는 동안 합계출산율은 1.13명에서 0.68명으로 40% 하락했다. 출생아 수는 2020년 27.2만명에서 지난해 21.6만명으로 줄었다.</p>
+<p>예산의 상당 부분은 현금 지원에 집중됐다. 4차 기본계획(2021-2025)의 경우 영아수당 월 100만원, 첫만남이용권 200만원 등 직접 지급 방식이 핵심이었다. [확인 필요: 현금성 지원 비중이 전체 예산의 몇 %인지]</p>
+<p>그러나 한국보건사회연구원의 2024년 조사에서 20-30대가 꼽은 비출산 사유 상위 3개는 양육/교육비(73.4%), 주거 불안정(61.2%), 경력 단절(54.8%)이었다. 돈을 더 달라는 응답이 아니라, 구조적 환경 변화를 요구하는 응답이 상위를 차지한 것이다.</p>
+<p>프랑스는 1994년부터 공공보육 인프라와 육아휴직 제도를 중심으로 정책을 설계해 출산율이 1.65명에서 2.02명(2010년)으로 반등했다. [확인 필요: 2024년 현재 프랑스 출산율은 1.68명으로 다시 하락 추세]</p>
+<p>[인용 필요: 인구학 전문가 — 현금 지원과 구조 개편의 효과 차이에 대한 코멘트]</p>
+<p>조규홍 보건복지부 장관은 지난 28일 &quot;현금 지원 중심 정책의 한계를 인정한다&quot;고 밝혔다. 정부가 공식적으로 방향 전환 필요성을 언급한 것은 의미 있는 변화로 평가된다.</p>
+</blockquote>
+<h3>[5단계] 기자 편집 — 4가지 수정</h3>
+<p><strong>수정 1: 전문가 인용 추가</strong></p>
+<table>
+<thead>
+<tr>
+<th>변경 전</th>
+<th>변경 후</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[인용 필요: 인구학 전문가]</td>
+<td>조영태 서울대 인구학과 교수는 &quot;현금을 줘도 아이를 맡길 곳이 없고 회사에서 눈치를 봐야 하면 출산 결정으로 이어지지 않는다&quot;고 말했다.</td>
+</tr>
+</tbody></table>
+<p><strong>수정 2: 수치 표현 수정</strong></p>
+<table>
+<thead>
+<tr>
+<th>변경 전</th>
+<th>변경 후</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.13명에서 0.68명으로 40% 하락</td>
+<td>1.13명에서 0.68명으로 하락</td>
+<td>출산율은 비율(명)이지 퍼센트가 아니므로 &quot;40% 하락&quot;은 오해를 부른다. &quot;0.45명 하락&quot;이 정확한 표현</td>
+</tr>
+</tbody></table>
+<p><strong>수정 3: 기자가 맥락 추가</strong></p>
+<table>
+<thead>
+<tr>
+<th>변경 전</th>
+<th>변경 후</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(없음)</td>
+<td>다만 지난해 혼인 건수가 17.8만건으로 전년 대비 소폭 반등한 점은 주목할 대목이다. 이것이 출생아 수 반등으로 이어질지는 2026년 데이터를 봐야 알 수 있다.</td>
+</tr>
+</tbody></table>
+<p>AI는 &quot;위기&quot; 프레임에 맞는 숫자만 배치했다. 기자는 반대 방향의 데이터(혼인 건수 반등)를 추가해 균형을 맞췄다.</p>
+<p><strong>수정 4: AI의 사설적 판단 삭제</strong></p>
+<table>
+<thead>
+<tr>
+<th>변경 전</th>
+<th>변경 후</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>방향 전환 필요성을 언급한 것은 의미 있는 변화로 평가된다.</td>
+<td>(삭제)</td>
+<td>&quot;의미 있는 변화로 평가된다&quot;는 누가 평가한 것인지 주체가 없는 해석 문장. 프롬프트에서 금지했음에도 AI가 관성적으로 삽입한 사례</td>
+</tr>
+</tbody></table>
+<hr>
+<h3>이 예제들의 핵심 교훈 3가지</h3>
+<ol>
+<li><strong>AI는 도구이고, 기자는 편집자다.</strong> AI가 만든 모든 숫자, 비교, 해석은 검증 대상이다.</li>
+<li><strong>좋은 프롬프트는 &quot;잘 써줘&quot;가 아니다.</strong> 형식, 분량, 포함/제외 요소를 명시하는 것이다.</li>
+<li><strong>AI가 가장 자주 만드는 오류 3가지:</strong> 과장, 출처 없는 비교, 주체 없는 해석. 이 세 가지를 체크리스트로 만들면 편집 시간이 절반으로 줄어든다.</li>
+</ol>
+<hr>
 <h1>부록: 프롬프트 템플릿 12선</h1>
 <p>참가자가 바로 복사해서 쓸 수 있는 프롬프트 모음.</p>
 <h3>1. 기사 요약</h3>
@@ -1317,7 +2263,7 @@ _workspace/research_asia.md
 
 </div>
 <footer>
-  <p>언론인을 위한 AI 활용 워크숍 — 2026</p>
+  <p>언론인을 위한 AI 활용 워크숍 — 2026 v2.0</p>
 </footer>
 </body>
 </html>
